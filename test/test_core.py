@@ -35,6 +35,13 @@ class TestMethods(unittest.TestCase):
     def test_avg(self):
         operation = Operations([1,2,3,4], False)
         self.assertAlmostEqual(operation.avg(), 2.5, msg='Incorrect result')
+        
+    def test_median(self):
+        operation = Operations([1,2,3,4], False)
+        self.assertAlmostEqual(operation.median(), 2.5, msg='Incorrect result')
+        operation = Operations([1,2,3,4,5], False)
+        self.assertAlmostEqual(operation.median(), 3, msg='Incorrect result')
+
 
 if __name__ == '__main__':
     unittest.main()
