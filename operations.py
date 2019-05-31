@@ -1,5 +1,4 @@
 import math
-import statistics
 
 class Operations:
     def __init__(self, value1):
@@ -37,5 +36,11 @@ class Operations:
     def avg(self):
         return(sum(self.value1)/len(self.value1))
 
-    def median(self):
-        return(statistics.median(self.value1))
+    def median(self): 
+        sortedLst = sorted(self.value1) 
+        lstLen = len(self.value1) 
+        index = (lstLen - 1) // 2 
+        if (lstLen % 2):
+            return sortedLst[index]
+        else:
+            return (sortedLst[index] + sortedLst[index + 1])/2.0
