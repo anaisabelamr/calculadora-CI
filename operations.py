@@ -35,3 +35,6 @@ class Operations:
 
     def avg(self):
         return(sum(self.value1)/len(self.value1))
+
+    def median(self):
+        return(statistics.median(self.value1))
